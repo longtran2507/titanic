@@ -4,14 +4,6 @@ import Home
 import predict
 import search
 import matplotlib.pyplot as plt
-import matplotlib.font_manager as fm
-
-# Đường dẫn tới file font
-font_path = 'fonts/NanumGothic-Regular.ttf'
-font_prop = fm.FontProperties(fname=font_path)
-
-plt.rc('font', family=font_prop.get_name())
-plt.rcParams['axes.unicode_minus'] = False
 
 st.set_page_config(page_title="Titanic Survival Analysis", layout="wide", page_icon="🚢")
 
