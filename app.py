@@ -3,6 +3,8 @@ from streamlit_option_menu import option_menu
 import Home
 import predict
 import search
+import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
 
 # Đường dẫn tới file font
 font_path = 'fonts/NanumGothic-Regular.ttf'
