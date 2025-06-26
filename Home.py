@@ -4,7 +4,16 @@ import seaborn as sns             # 고급 시각화용 라이브러리
 import matplotlib.pyplot as plt   # 기본 시각화 라이브러리
 import numpy as np                # 수치 계산용
 import matplotlib as mpl          # 폰트 등 matplotlib 전역 설정에 사용
-
+import platform  
+def set_font():
+    os_name = platform.system()
+    if os_name == "Darwin":  # macOS
+        mpl.rc('font', family='AppleGothic')
+    elif os_name == "Windows":
+        mpl.rc('font', family='Malgun Gothic')
+    else:  # Linux hoặc hệ điều hành khác
+        mpl.rc('font', family='DejaVu Sans')
+    plt.rcParams['axes.unicode_minus'] = False
 def show_Home():
     #  한글 폰트 설정 (Mac: AppleGothic)
     mpl.rc('font', family='AppleGothic')
